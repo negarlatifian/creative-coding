@@ -9,9 +9,12 @@ const ctx = canvas.getContext("2d");
 // // ctx.fill();
 // ctx.stroke();
 
-canvas.addEventListener("mousemove", (event) => {
-  //   console.log(event.x, event.y);
-  ctx.beginPath();
-  ctx.rect(event.x, event.y, 10, 30);
-  ctx.fill();
-});
+// canvas.addEventListener("mousemove", (event) => {
+//   //   console.log(event.x, event.y);
+//   ctx.beginPath();
+//   ctx.rect(event.x, event.y, 10, 30);
+//   ctx.fill();
+// });
+ctx.beginPath();
+ctx.arc(100, 100, 50, 0, Math.PI);
+ctx.fill();
