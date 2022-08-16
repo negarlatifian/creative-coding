@@ -15,6 +15,9 @@ const ctx = canvas.getContext("2d");
 //   ctx.rect(event.x, event.y, 10, 30);
 //   ctx.fill();
 // });
+const degToRad = (deg) => {
+  return (deg / 180) * Math.PI;
+};
 ctx.beginPath();
-ctx.arc(100, 100, 50, 0, Math.PI);
+ctx.arc(100, 100, 50, 0, degToRad(180));
 ctx.fill();
