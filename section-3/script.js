@@ -27,10 +27,9 @@ const ctx = canvas.getContext("2d");
 // -------------------------6. Generate Atoms -------------------
 
 let atoms = [];
-canvas.addEventListener("click", (event) => {
+canvas.addEventListener("mousemove", (event) => {
   for (let i = 0; i < 20; i++) {
     atoms.push(new Atom(event.x, event.y));
-    console.log(atoms);
   }
 });
 
@@ -43,6 +42,10 @@ const animate = () => {
     if (atom.radius < 0.3) {
       atoms.splice(index, 1);
     }
+    ctx.save();
+    ctx.fillStyle = "rgba(255, 255, 255, 0.2)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.restore();
   });
   requestAnimationFrame(animate);
 };
