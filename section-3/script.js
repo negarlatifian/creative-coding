@@ -35,9 +35,14 @@ canvas.addEventListener("click", (event) => {
 });
 
 const animate = () => {
-  atoms.forEach((atom) => {
+  atoms.forEach((atom, index) => {
     atom.draw();
-    atom.update();
+    atom.updateSpeed();
+    atom.updateRadius();
+
+    if (atom.radius < 0.3) {
+      atoms.splice(index, 1);
+    }
   });
   requestAnimationFrame(animate);
 };
@@ -50,9 +55,13 @@ class Atom {
     this.speedX = Math.random() * 4 - 2; // bewtween -2 and +2
     this.speedY = Math.random() * 4 - 2; // bewtween -2 and +2
   }
-  update() {
+  updateSpeed() {
     this.x += this.speedX;
     this.y += this.speedY;
+  }
+
+  updateRadius() {
+    this.radius -= 0.1;
   }
 
   draw() {
