@@ -28,7 +28,7 @@ const ctx = canvas.getContext("2d");
 
 let atoms = [];
 canvas.addEventListener("mousemove", (event) => {
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 10; i++) {
     atoms.push(new Atom(event.x, event.y));
   }
 });
@@ -42,11 +42,11 @@ const animate = () => {
     if (atom.radius < 0.3) {
       atoms.splice(index, 1);
     }
-    ctx.save();
-    ctx.fillStyle = "rgba(255, 255, 255, 0.2)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.restore();
   });
+  ctx.save();
+  ctx.fillStyle = "rgba(255, 255, 255, 0.2)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.restore();
   requestAnimationFrame(animate);
 };
 
