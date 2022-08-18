@@ -12,7 +12,8 @@ canvas.addEventListener("mousemove", (event) => {
     atoms.push(new Atom(event.x, event.y));
   }
 });
-
+const img = new Image();
+img.src = "darth.png";
 const animate = () => {
   atoms.forEach((atom, index) => {
     atom.draw();
@@ -25,6 +26,7 @@ const animate = () => {
   });
   ctx.save();
   ctx.fillStyle = "rgba(255, 255, 255, 0.2)";
+  // ctx.drawImage(img, 0, 0);
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   ctx.restore();
   requestAnimationFrame(animate);
