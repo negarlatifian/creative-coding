@@ -1,27 +1,22 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* background: black */
+#my-canvas{
+    /* background-color: blueviolet; */
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* background-color: black; */
-    background-image: url(background2.jpg);
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover
-
+.darth{
+    z-index: -2;
 }
 .navbar-container{
     display: flex;
     flex-direction: row;
     list-style: none;
     justify-content: center;
-        margin-right: 2rem;
+    margin-right: 2rem;
+    border:none
 }
 .navbar-container li{
     text-decoration: none;
@@ -37,14 +32,6 @@ body{
     padding: 1rem 0.7rem;
     font-size: 1.1rem;
     cursor: pointer;
-}
-
-#my-canvas{
-    /* border: 1px solid white;  */
-    position: absolute;
-    top: 45%;
-    left: 25%; 
-    transform: translate(-50%, -50%);
 }
 .logo{
     width:10rem;
