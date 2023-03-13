@@ -53,7 +53,7 @@ img.onload = () => {
   }
 
   // generate 10,000 particles
-  for (let i = 0; i < 50000; i++) {
+  for (let i = 0; i < 7000; i++) {
     particlesArray.push(new Particle());
   }
   // console.log(brightnessArray);
