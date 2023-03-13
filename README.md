@@ -1,6 +1,6 @@
 # creative-coding
 
-
-<img src= "https://raw.githubusercontent.com/negarlatifian/creative-coding/main/starwars.webp" width="100%" />
-
+<div style="text-align: center;">
+<img src= "https://github.com/negarlatifian/creative-coding/blob/main/yoda.gif" width="100%" />
+</div>
 A creative coding playground with star wars theme. 
